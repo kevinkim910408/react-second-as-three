@@ -1,10 +1,19 @@
+/* import */
 
-function App() {
+// Route
+import { Route, Routes } from 'react-router-dom';
+
+// Import Components
+import Detail from './pages/Detail';
+import Home from './pages/Home';
+
+const App = () => {
   return (
-    <div >
-      This is APPPPP
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/detail/:day" element={<Detail />} />
+    </Routes>
   );
-}
+};
 
 export default App;
